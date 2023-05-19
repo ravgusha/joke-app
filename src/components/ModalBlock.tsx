@@ -3,22 +3,21 @@ import { Modal, Text, Checkbox } from "@nextui-org/react";
 
 
 const ModalBlock = (props) => {
-  const checkboxes = ["Programming", "Miscellaneous", "Dark", "Pun", "Spooky", "Christmas"];
-
+  
   return (
     <Modal closeButton aria-labelledby="modal-title" open={props.visible} onClose={props.onClose}>
       <Modal.Header>
         <Text id="modal-title" size={18}>
-          Categories:
+          Choose:
         </Text>
       </Modal.Header>
       <Modal.Body>
         <Checkbox.Group
-          value={props.categories}
-          onChange={props.setCategories}
+          value={props.value}
+          onChange={props.setValue}
           size="md"
         >
-          {checkboxes.map((checkbox) => (
+          {props.checkboxes.map((checkbox) => (
             <Checkbox key={checkbox} value={checkbox}>
               {checkbox}
             </Checkbox>
