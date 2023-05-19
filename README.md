@@ -2,7 +2,7 @@
 
 
 CoChecker - приложения для поиска компаний и ИП
-## Деплой: r-joke-app.netlify.app
+## Деплой: https://r-joke-app.netlify.app/
 ![image](https://github.com/ravgusha/company-checker/assets/62184992/bb2f55a7-e2cd-4601-be6a-fb41a3f258e0)
 ## Версия Node.js
 v16.15.1
