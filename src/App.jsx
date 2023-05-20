@@ -6,7 +6,7 @@ import ModalBlock from "./components/ModalBlock/ModalBlock.jsx";
 import Logo from "./components/Logo/Logo";
 import Joke from "./components/Joke/Joke.jsx";
 
-import "./App.css";
+import "./App.scss";
 
 const baseURL = "https://v2.jokeapi.dev/joke/";
 
