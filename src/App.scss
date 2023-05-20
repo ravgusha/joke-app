@@ -4,17 +4,17 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-}
-
-.main {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
 
   .logo {
     width: 65px;
     position: fixed;
     left: 40px;
     top: 20px;
+  }
+
+  .main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
 }
