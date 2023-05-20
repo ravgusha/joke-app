@@ -10,11 +10,11 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-}
 
-.logo {
-  width: 65px;
-  position: fixed;
-  left: 40px;
-  top: 20px;
+  .logo {
+    width: 65px;
+    position: fixed;
+    left: 40px;
+    top: 20px;
+  }
 }

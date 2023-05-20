@@ -2,8 +2,9 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Button, Text, Container } from "@nextui-org/react";
 
-import ModalBlock from "./components/ModalBlock.tsx";
-import logo from "./logo.svg";
+import ModalBlock from "./components/ModalBlock/ModalBlock.jsx";
+import Logo from "./components/Logo/Logo";
+import Joke from "./components/Joke/Joke.jsx";
 
 import "./App.css";
 
@@ -70,8 +71,8 @@ function App() {
 
   return (
     <Container display="flex" justify="center" alignItems="center">
-      <img src={logo} className="logo" alt="logo" />
-      <div className="main">
+      <Logo />
+      <main className="main">
         {error ? (
           <Text
             h4
@@ -80,27 +81,8 @@ function App() {
           >
             {error}
           </Text>
-        ) : joke.type === "single" ? (
-          <Text
-            h3
-            color="#19A7CE"
-            css={{ flexBasis: "100%", padding: "0 10% 30px", textAlign: "center" }}
-          >
-            {joke.joke}
-          </Text>
         ) : (
-          <>
-            <Text
-              h3
-              color="#19A7CE"
-              css={{ flexBasis: "100%", padding: "0 10% 30px", textAlign: "center" }}
-            >
-              {joke.setup}
-            </Text>
-            <Text h3 color="#19A7CE" css={{ flexBasis: "100%", textAlign: "center" }}>
-              {joke.delivery}
-            </Text>
-          </>
+          <Joke joke={joke} />
         )}
         <Button size="xl" css={{ background: "#B0DAFF", marginBottom: "15px" }} onPress={getJoke}>
           Get New Joke
@@ -129,7 +111,7 @@ function App() {
           setValue={setType}
           checkboxes={TypesList}
         />
-      </div>
+      </main>
     </Container>
   );
 }
